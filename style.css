@@ -1,0 +1,1229 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+
+/* Hide content until preloader is removed */
+.content {
+  display: none;
+}
+/* Custom Scroll Bar CSS */
+
+
+/* navbar styling */
+nav{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav.sticky{
+  background: #0b0b0b;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+  align-items: center;
+  padding: 10px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFF;
+  padding: 6px 0;
+
+  background:
+  linear-gradient(
+    to right,
+    rgba(100, 200, 200, 1),
+    rgba(100, 200, 200, 1)
+  ),
+  linear-gradient(
+    to right,
+    rgba(255, 0, 0, 1),
+    rgba(255, 0, 180, 1),
+    rgba(0, 100, 200, 1)
+);
+background-size: 100% 3px, 0 3px;
+background-position: 100% 100%, 0 100%;
+background-repeat: no-repeat;
+transition: background-size 400ms;
+
+}
+
+.navbar .menu a:hover{
+  color: #FFF;
+  background-size: 0 3px, 100% 3px;
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .menu a:hover{
+  color: orangered;
+}
+.navbar.active .menu {
+  left: 0;
+}
+
+/* Show the cancel button when the menu button is clicked */
+.menu-btn.active {
+  display: none;
+}
+
+/* Show the menu button when the cancel button is clicked */
+.cancel-btn.active {
+  display: none;
+}
+
+.logo {
+  width: 200px; /* Set the width of the logo */
+  height: 80px; /* Maintain aspect ratio */
+  margin: 0;
+}
+
+/* Optional hover effect */
+.logo:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #FFF;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
+
+/* home section styling */
+
+.home {
+  height: 100vh;
+  width: 100%;
+  background: url("Images/Colorful-Dark-Backgrounds-Hd.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home .home-content {
+  width: 90%;
+  margin: auto;
+}
+
+.home .text-one {
+  font-size: 25px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.home .text-one span {
+  font-size: 60px;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards 2s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* About Section Styling */
+
+.about {
+  padding: 50px 0;
+  background-color: #0C0C0C;
+  color: #fff;
+}
+.content {
+  display: block;
+}
+
+.about .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.about .title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about .about-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .about-details .left,
+.about .about-details .right {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about .about-details .left {
+  text-align: center;
+}
+
+.about .about-details .left img {
+  max-width: 50%;
+  height: 30%;
+  border-radius: 10px;
+}
+
+.about .about-details .right {
+  text-align: center;
+}
+.about .about-details .right .topic {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about .about-details .right p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about .about-details .right .button {
+  margin-top: 20px;
+}
+
+.about .about-details .right .button button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.about .about-details .right .button button:hover {
+  background-color: #3059d4;
+}
+
+/* about1 */
+
+.about1 {
+  padding: 50px 0;
+  background-color: #0C0C0C;
+  color: #fff;
+}
+
+.about1 .content1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.about1 .title1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+.title1 span {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 32px;
+  color: #fff;
+}
+
+.about-details1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.right1, .left1 {
+  flex: 1;
+  padding: 10px;
+}
+
+.right1 {
+  order: 2;
+}
+
+.left1 {
+  order: 1;
+  text-align: center;
+}
+
+.left1 img {
+  max-width: 70%;
+  height: auto;
+}
+
+
+.intro {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  color: #ccc;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+}
+
+.intro ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.intro ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.intro ul li i {
+  color: #405DE6;
+  margin-right: 10px;
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.author {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+}
+
+
+/* button */
+
+.button1 {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.button1 button {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: medium;
+}
+
+
+.button1 button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button1 button:active {
+  color: #000
+}
+
+.button1 button :active:after {
+  background: transparent;
+}
+
+.button1 button:hover:before {
+  opacity: 1;
+}
+
+.button1 button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+/*-------------------------------------
+        8. Skills
+--------------------------------------*/
+#profiles{
+  background-color: #0b0b0b;
+}
+.custom-icon-size {
+  font-size: 3rem; /* Adjust size as needed */
+}
+
+
+.profiles-content {
+  padding-top: 50px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #e5ebf2;
+  text-align: center;
+  text-decoration: underline  cornflowerblue;
+  font-family: 'Dancing Script', cursive;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-sm-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.profile-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.single-profile {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b2c1ce;
+  overflow: hidden;
+  transition: background 0.5s linear;
+  border-radius: 5px;
+}
+
+.profile-icon-name {
+  display: none; /* Hide the profile names */
+}
+.profile-txt i{
+ color: #002bff;
+}
+.profile-txt p{
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+}
+.single-profile-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d92cf9;
+  background: linear-gradient(to right, #d92cf9 0%, #b636ff 100%);
+  transform: scale(0);
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.single-profile:hover .single-profile-overlay {
+  transform: scale(1);
+}
+
+.single-profile:hover .profile-txt a>i {
+  color: #fff;
+  
+}
+
+
+/* Section containing social icons and button */
+#icone {
+  text-align: center;
+  padding-bottom: 60px;
+  background-color: #0b0b0b;
+}
+
+#icone h1 {
+  font-size: 2.5rem;
+  color: #de6464;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#icone p{
+  font-size: 5px;
+  color: grey;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+#icone .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#icone .social-icons ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#icone .social-icons ul li {
+  list-style: none;
+}
+
+#icone .social-icons ul li a {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+#icone .social-icons ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: transform 0.5s, color 0.5s;
+  z-index: 3;
+}
+
+#icone .social-icons ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+#icone .social-icons ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: top 0.5s;
+  z-index: 2;
+}
+
+#icone .social-icons ul li a:hover:before {
+  top: 0;
+}
+
+#icone .social-icons ul li:nth-child(1) a:before {
+  background: #3b5999;
+}
+
+#icone .social-icons ul li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+#icone .social-icons ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+#icone .social-icons ul li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+#icone .button1 {
+  margin-top: 20px;
+}
+
+#icone .button1 a {
+  text-decoration: none;
+}
+
+#icone .button1 button {
+  padding:20px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#icone .button1 button:hover {
+  background-color: #3059d4;
+}
+
+/* project */
+
+/* Projects Section */
+.projects {
+  padding: 60px 0;
+  background-color: #010304;
+}
+
+.projects .container {
+  max-width: 1200px;
+  margin: 0 auto;  /* Centering the container */
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-family: 'Dancing Script', cursive;
+  color: #fff; /* Added color for better visibility */
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;  /* Reduced gap for better alignment */
+  justify-content: center;
+}
+
+.project-item {
+  position: relative; /* Added position relative for pseudo-elements */
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  height: 400px;  /* Increased height for better content fit */
+  display: flex;
+  flex-direction: column;  /* Ensuring the content stacks properly */
+  transition: box-shadow 1s;
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;  /* Fixed height for images */
+  object-fit: cover;  /* Ensures images cover the space properly */
+}
+
+.project-info {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;  /* Ensures the info section expands to fill space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Aligns content properly */
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #ada6a6;
+  margin-bottom: 20px;
+  flex-grow: 1;  /* Ensures the paragraph takes available space */
+}
+.project-info .btn {
+  width: 150px;
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 1px auto;  /* Centers the button horizontally */
+  height: 35px;
+  text-align: center;
+  border: none;
+  background: linear-gradient(to right, #405DE6, #c91267, #e409e1, #405DE6); /* Gradient background */
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+}
+
+.project-info .btn:hover {
+  background-position: 100% 0;  /* Changes the background position on hover */
+}
+
+.project-item:hover {
+  box-shadow: 0 15px 35px rgba(244, 12, 12, 0.1);
+}
+
+.project-item:hover::before, .project-item:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #11ddd3;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 2s clockwise infinite;
+}
+
+.project-item:hover::after {
+  background: #e409e1;
+  animation: 3s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
+
+/* footer */
+footer {
+  background-color: #02071e;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  align-items: end;
+  display: block;
+  z-index: 1;
+}
+
+footer .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+footer .text span {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+footer .text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .about .left img{
+    height: 350px;
+    width: 350px;
+  }
+  .services .box {
+    width: 48%;
+  }
+
+}
+
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #010304;
+    height: 100vh;
+    max-width: 200px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #FFF;
+  }
+ 
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .home .text-one {
+    font-size: 1.5rem;
+  }
+
+  .home .text-one span {
+    font-size: 2.5rem;
+  }
+
+  .about .title {
+    font-size: 2rem;
+  }
+
+  .about .about-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .about-details .left,
+  .about .about-details .right {
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  .about .about-details .right .topic {
+    font-size: 1.5rem;
+  }
+
+  .about .about-details .right p {
+    font-size: 0.9rem;
+  }
+
+
+  /* about1 */
+  .about-details1 {
+    flex-direction: column;
+  }
+
+  .right1, .left1 {
+    order: initial;
+    padding: 10px 0;
+  }
+
+  .right1 {
+    text-align: center;
+  }
+
+  /* skills */
+  
+  .skills .skills-details{
+    background-color: #010304;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+}
+
+.single-profile {
+  height: 80px;
+}
+
+.profile-icon-name {
+  font-size: 12px;
+}
+
+.profile-border {
+  border: none;
+}
+
+.single-profile.profile-no-border {
+  border-right: 1px solid #b2c1ce;
+}
+.col-sm-3 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.single-profile {
+  height: 120px;
+}
+
+.profile-icon-name {
+  font-size: 14px;
+}
+.project-grid {
+  flex-direction: column; /* Stack projects vertically on smaller screens */
+  align-items: center; /* Center-align project items */
+  gap: 20px; /* Decrease gap between project items */
+}
+
+.project-item {
+  max-width: 90%; /* Adjust max-width for better fit on smaller screens */
+  height: auto; /* Allow height to adjust based on content */
+}
+
+.project-info .btn {
+  width: 120px; /* Adjust button width for smaller screens */
+  font-size: 16px; /* Decrease font size for better fit */
+}
+}
+
+/* project */
+
+
+/* footer */
+
+#icone p {
+  font-size: 2rem;
+}
+
+#icone .button1 button {
+  font-size: 1rem;
+  padding: 8px 16px;
+}
+
+#icone .social-icons ul li a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  margin: 0 5px;
+}
+/* Social icons styling */
+.social-icons2 ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.social-icons2 ul li {
+  margin: 0 10px;
+}
+
+.social-icons2 a {
+  text-decoration: none;
+  color: #574949;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icons2 a:hover {
+  color: #0073b1; /* Example hover color (LinkedIn blue) */
+}
+
+.icon {
+  display: inline-block;
+  font-size: 24px;
+}
+
+
+
+
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #4070f4;
+  }
+  .about .title {
+    font-size: 2em;
+  }
+
+  .about .about-details .right .topic {
+    font-size: 1.2em;
+  }
+
+  .about .about-details .right p {
+    font-size: 0.8em;
+  }
+
+  .about .about-details .right .button button {
+    font-size: 0.8em;
+  }
+
+  .title1 span {
+    font-size: 28px;
+  }
+
+  .topic1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .button1 button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .single-profile {
+    height: 60px;
+}
+
+.profile-icon-name {
+    font-size: 10px;
+}
+.col-sm-3 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.single-profile {
+  height: 100px;
+}
+
+.profile-icon-name {
+  font-size: 12px;
+}
+
+/* footer */
+#icone p {
+  font-size: 1.5rem;
+}
+
+#icone .button1 button {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+}
+
+#icone .social-icons ul li a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  margin: 0 3px;
+}
+}
